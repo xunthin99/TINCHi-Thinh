@@ -1,11 +1,13 @@
-#include <iostream>
-#include <conio.h>
-#include <stdio.h>
-#include <dos.h>
-#include <string.h>
-#include <windows.h>
+//#include <iostream>
+//#include <conio.h>
+//#include <stdio.h>
+//#include <dos.h>
+//#include <string.h>
+//#include <windows.h>
+#pragma once
+//#include "kb.h"
 #include "mylib.h"
-#include <time.h>
+#include "xulide.h"
 using namespace std;
 
 const int so_item = 6;
@@ -116,13 +118,20 @@ do {
 //}
 //MENU CHA
 int menuConLTC(char td [so_itemLTC][50]){
-	int chon;  
+	int chon; 
+	LopTC ltc;
+	TREE t;
+	KhoiTaoCay(t);
+	
     while  (1) {
         chon = MenuDong (td); 
         switch (chon) {
         
         case 1: gotoxy (50,20); 
 		        cout << "Vua chon chuc nang Them lop tin chi " << chon;
+		        Sleep(1000);
+		        system("cls");
+		        nhap (ltc);
 				break;
         case 2:gotoxy (50,20); 
 		        cout << "Vua chon chuc nang Xoa lop tin chi " << chon; 
@@ -229,25 +238,25 @@ int main (){
         chon = MenuDong (thucdon);
         switch (chon) {
         case 1: gotoxy (50,20);
-		        cout << "Vua chon chuc nang " << chon;
+		        cout << "Vua chon chuc nang QUAN LI LOP TIN CHI " << chon;
 		        Sleep (1000);
 		        system("cls");
 		        menuConLTC(thucdonLTC); //Da hien thi dc menu con
 			    break;
         case 2:gotoxy (50,20); 
-		        cout << "Vua chon chuc nang " << chon;
+		        cout << "Vua chon chuc nang QUAN LI SINH VIEN" << chon;
 		        Sleep (1000);
 		        system("cls");
 		        menuConSV(thucdonSV);
 		        break;
 		case 3: gotoxy (50,20); 
-		        cout << "Vua chon chuc nang " << chon;
+		        cout << "Vua chon chuc nang QUAN LI MON HOC" << chon;
 		        Sleep (1000);
 		        system("cls");
 		        menuConMH(thucdonMH);
 				break;
 		case 4: gotoxy (50,20); 
-		        cout << "Vua chon chuc nang " << chon;
+		        cout << "Vua chon chuc nang DIEM " << chon;
 		        Sleep (1000);
 		        system("cls");
 		        menuConDIEM(thucdonDIEM);

@@ -11,7 +11,7 @@
 //const int WHITE=15;
 #define PASSWORD "abcdef"
 //const int WHITE=15;
-
+//
 char* Pwd () {
      char S[40]; int i=0;
      while ((S[i]= getch()) != Enter ) 

@@ -2,12 +2,13 @@
 #include<conio.h>
 #include<windows.h>
 #include<string>
+#include <stdio.h>
+#include <dos.h>
 #include<iomanip>
 #include<fstream>
 #include <cstdlib>
 #include <ctime> 
-using namespace std;
-
+#include <time.h>
 #define MAXMH 300
 
 // danh sach sinh vien : ds lien ket don 
@@ -42,7 +43,7 @@ typedef dsdk *PTRDK;
 
 struct monHoc {
 	char maMonHoc[11] ;
-	string TenMH ;
+	std::string TenMH ;
 	float sotclt ;
 	float sotcth ;
 };
@@ -58,7 +59,7 @@ struct DSMonHoc {
 struct LopTC{
 	int  malopTc; 		//ma lop
 	char mmh[11];		//ma mon hoc
-	char nienkhoa[10];		// nien khoa
+	int nienkhoa;		// nien khoa
 	int hocki;		// hoc ki
 	int nhom;			//nhom
 	int so_svmax;
